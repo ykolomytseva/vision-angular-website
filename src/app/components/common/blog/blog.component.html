@@ -1,0 +1,177 @@
+<div class="blog-area pt-100 pb-75 dotted-bg">
+    <div class="container">
+        <div class="section-title">
+            <span
+                class="sub-title"
+                [ngClass]="{ 'main-color': router.url === '/index-3' }"
+            >
+                OUR BLOG
+            </span>
+            <h2>Inspire, Innovate, Integrate</h2>
+            <p>
+                Explore insights and stories that shape the future. Stay updated
+                with our latest articles and gain knowledge on diverse topics.
+            </p>
+        </div>
+        <div
+            class="row justify-content-center"
+            [ngClass]="{ 'd-none': router.url === '/index-2' }"
+        >
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <a routerLink="" class="image d-block">
+                        <img
+                            src="assets/images/blog/blog1.jpg"
+                            alt="blog-image"
+                        />
+                    </a>
+                    <div class="content">
+                        <div class="date">
+                            01
+                            <span>Jul</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >Revolutionizing AI in Everyday Life</a
+                            >
+                        </h4>
+                        <p>
+                            Discover how AI is transforming various industries
+                            and what it means for the future.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <a routerLink="" class="image d-block">
+                        <img
+                            src="assets/images/blog/blog2.jpg"
+                            alt="blog-image"
+                        />
+                    </a>
+                    <div class="content">
+                        <div class="date">
+                            25
+                            <span>Jun</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >The Future of Blockchain Technology</a
+                            >
+                        </h4>
+                        <p>
+                            An in-depth analysis of how blockchain is set to
+                            revolutionize the digital world.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <a routerLink="" class="image d-block">
+                        <img
+                            src="assets/images/blog/blog3.jpg"
+                            alt="blog-image"
+                        />
+                    </a>
+                    <div class="content">
+                        <div class="date">
+                            15
+                            <span>Jun</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >Cybersecurity: Protecting Your Digital Life</a
+                            >
+                        </h4>
+                        <p>
+                            Learn about the latest trends in cybersecurity and
+                            how to safeguard your data.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="row justify-content-center d-none"
+            [ngClass]="{ 'd-flex': router.url === '/index-2' }"
+        >
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <div class="content">
+                        <div class="date">
+                            01
+                            <span>Jul</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >Revolutionizing AI in Everyday Life</a
+                            >
+                        </h4>
+                        <p>
+                            Discover how AI is transforming various industries
+                            and what it means for the future.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <div class="content">
+                        <div class="date">
+                            25
+                            <span>Jun</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >The Future of Blockchain Technology</a
+                            >
+                        </h4>
+                        <p>
+                            An in-depth analysis of how blockchain is set to
+                            revolutionize the digital world.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-25">
+                    <div class="content">
+                        <div class="date">
+                            15
+                            <span>Jun</span>
+                        </div>
+                        <h4>
+                            <a routerLink=""
+                                >Cybersecurity: Protecting Your Digital Life</a
+                            >
+                        </h4>
+                        <p>
+                            Learn about the latest trends in cybersecurity and
+                            how to safeguard your data.
+                        </p>
+                        <a routerLink="" class="link-btn"
+                            >Read More <i class="flaticon-right-up"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

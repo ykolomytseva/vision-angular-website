@@ -1,0 +1,175 @@
+.new-feedback-area {
+    background-color: #f6ffe2;
+    padding: 0;
+    &.dotted-bg {
+        position: relative;
+        z-index: 1;
+        &::before,
+        &::after {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            content: "";
+            position: absolute;
+        }
+        &::before {
+            height: 50%;
+            background-color: var(--whiteColor);
+        }
+        &::after {
+            height: 50%;
+            background: {
+                image: url("../../../../assets/images/bg.png");
+                position: center center;
+                repeat: no-repeat;
+                size: cover;
+            }
+        }
+    }
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .new-feedback-carousel {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        .owl-stage-outer {
+            display: flex;
+            justify-content: center;
+        }
+        .owl-stage {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .new-single-feedback-box {
+        text-align: center;
+        border-radius: 10px;
+        padding: 40px;
+        background-color: #ffffff;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 15px;
+        i {
+            color: #f28705;
+            margin-bottom: 12px;
+            font-size: 60px;
+            line-height: 1;
+            display: block;
+            @media only screen and (max-width: 1199px) {
+                font-size: 50px;
+            }
+            @media only screen and (max-width: 991px) {
+                font-size: 40px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: #000000;
+            font-size: 18px;
+            @media only screen and (max-width: 1199px) {
+                font-size: 16px;
+            }
+            @media only screen and (max-width: 991px) {
+                font-size: 14px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+        .client-info {
+            margin-top: 20px;
+            h4 {
+                margin-bottom: 8px;
+                font-size: 22px;
+                font-weight: 700;
+                color: #f28705;
+                @media only screen and (max-width: 1199px) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: 991px) {
+                    font-size: 18px;
+                }
+                @media only screen and (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+            span {
+                display: block;
+                color: #000000;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .new-single-feedback-box {
+            padding: 20px;
+            margin-bottom: 20px;
+            i {
+                font-size: 30px;
+            }
+            p {
+                font-size: 12px;
+            }
+            .client-info {
+                h4 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .new-single-feedback-box {
+            padding: 25px;
+            margin-bottom: 30px;
+            i {
+                font-size: 40px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .client-info {
+                h4 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .new-single-feedback-box {
+            padding: 30px;
+            margin-bottom: 35px;
+            i {
+                font-size: 50px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .client-info {
+                h4 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+        .new-single-feedback-box {
+            padding: 40px;
+            margin-bottom: 40px;
+            i {
+                font-size: 60px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .client-info {
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+<div
+    class="pricing-area pt-100 pb-75 dotted-bg bg-f7ffe2 d-none"
+    [ngClass]="{ 'd-block': router.url === '/index-2' }"
+>
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">OUR PRICING</span>
+            <h2>Working together to create the next big thing</h2>
+            <p>
+                Choose a plan that suits your needs. Our pricing is flexible to
+                cater to both individuals and businesses.
+            </p>
+        </div>
+
+        <div class="pricing-tabs">
+            <div class="toggle-buttons">
+                <button (click)="togglePricing()" [class.active]="isMonthly">
+                    Monthly
+                </button>
+                <button (click)="togglePricing()" [class.active]="!isMonthly">
+                    Yearly
+                </button>
+            </div>
+
+            <div *ngIf="isMonthly">
+                <div class="row justify-content-center">
+                    <div
+                        class="col-lg-4 col-md-6 col-sm-6"
+                        *ngFor="let plan of monthlyPlans"
+                    >
+                        <div class="single-pricing-box mb-25">
+                            <div class="pricing-header">
+                                <h4>{{ plan.name }}</h4>
+                                <p>{{ plan.description }}</p>
+                            </div>
+                            <div class="price">
+                                €{{ plan.price }}/<span>month</span>
+                            </div>
+                            <a routerLink="/contact" class="default-btn"
+                                >Get Started Now</a
+                            >
+                            <span class="sub-title">What’s Included:</span>
+                            <ul class="list-unstyled mb-0">
+                                <li
+                                    *ngFor="let feature of plan.features"
+                                    [class.inactive]="
+                                        feature.includes('(Inactive)')
+                                    "
+                                >
+                                    {{ feature.replace(" (Inactive)", "") }}
+                                </li>
+                            </ul>
+                            <span *ngIf="plan.popular" class="popular"
+                                >Popular</span
+                            >
+                            <img
+                                src="assets/images/shape/shape5.png"
+                                alt="shape"
+                                class="shape"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="!isMonthly">
+                <div class="row justify-content-center">
+                    <div
+                        class="col-lg-4 col-md-6 col-sm-6"
+                        *ngFor="let plan of yearlyPlans"
+                    >
+                        <div class="single-pricing-box mb-25">
+                            <div class="pricing-header">
+                                <h4>{{ plan.name }}</h4>
+                                <p>{{ plan.description }}</p>
+                            </div>
+                            <div class="price">
+                                <span class="original-price"
+                                    >€{{ plan.originalPrice }}</span
+                                >
+                                €{{ plan.price }} /<span>year</span>
+                                <span class="free-months">2 months free</span>
+                            </div>
+                            <a routerLink="/contact" class="default-btn"
+                                >Get Started Now</a
+                            >
+                            <span class="sub-title">What’s Included:</span>
+                            <ul class="list-unstyled mb-0">
+                                <li
+                                    *ngFor="let feature of plan.features"
+                                    [class.inactive]="
+                                        feature.includes('(Inactive)')
+                                    "
+                                >
+                                    {{ feature.replace(" (Inactive)", "") }}
+                                </li>
+                            </ul>
+                            <span *ngIf="plan.popular" class="popular"
+                                >Popular</span
+                            >
+                            <img
+                                src="assets/images/shape/shape5.png"
+                                alt="shape"
+                                class="shape"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
